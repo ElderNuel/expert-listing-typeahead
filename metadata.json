@@ -1,6 +1,8 @@
 {
-  "name": "GeoLocation Typeahead",
+  "name": "Expert Listing Typeahead",
   "description": "Production-ready, accessible WAI-ARIA 1.2 Typeahead component querying geocoding data with race condition protection and 300ms debounce.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }
