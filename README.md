@@ -2,7 +2,8 @@
 
 > **Staff Frontend Engineering & Systems Architecture Assessment**  
 > **Candidate Evaluation for:** Founder & Technical Hiring Team, Expert Listing Limited (Lekki, Lagos, Nigeria)  
-> **Production Live Preview:** [ais-pre-2gbhcs3ne3grxkxynozuh4-16133975699.europe-west2.run.app](https://ais-pre-2gbhcs3ne3grxkxynozuh4-16133975699.europe-west2.run.app)
+> **Production Live URL:** [expertlistingtypeahead.vercel.app](https://expertlistingtypeahead.vercel.app)  
+> **Evaluation Staging Mirror:** [ais-pre-2gbhcs3ne3grxkxynozuh4-16133975699.europe-west2.run.app](https://ais-pre-2gbhcs3ne3grxkxynozuh4-16133975699.europe-west2.run.app)
 
 ---
 

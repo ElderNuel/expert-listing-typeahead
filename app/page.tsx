@@ -163,7 +163,22 @@ export default function Home() {
                 </div>
 
                 <div className="flex items-center gap-2">
-                  <div className="flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-xs">
+                  <a
+                    id="live-deployment-badge"
+                    href="https://expertlistingtypeahead.vercel.app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-3 py-2 rounded-xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 text-xs font-medium text-emerald-800 transition-colors shadow-2xs group"
+                  >
+                    <span className="relative flex h-2 w-2">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                    </span>
+                    <span>Live on Vercel</span>
+                    <Globe2 className="h-3.5 w-3.5 text-emerald-600 group-hover:translate-x-0.5 transition-transform" />
+                  </a>
+
+                  <div className="hidden sm:flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200 text-xs">
                     <div className="h-7 w-7 rounded-lg bg-emerald-100 flex items-center justify-center text-emerald-700">
                       <ShieldCheck className="h-4 w-4" />
                     </div>
