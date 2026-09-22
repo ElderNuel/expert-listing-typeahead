@@ -16,21 +16,46 @@ import { useTypeaheadSearch, type UseTypeaheadSearchOptions } from '../hooks/use
 import { searchLocations, formatLocationTitle, formatCoordinates } from '../lib/geocoding-api';
 import type { GeoLocation, TelemetryLog } from '../types/geo';
 
+/**
+ * Props contract for the production LocationTypeahead combobox component.
+ */
 export interface LocationTypeaheadProps {
+  /** Optional explicit element ID for DOM integration. */
   id?: string;
+  /** Accessible label displayed above the input and linked via htmlFor. */
   label?: string;
+  /** Accessible input placeholder guidance text. */
   placeholder?: string;
+  /** Default search query string to seed the input value. */
   defaultValue?: string;
+  /** Selection handler invoked when an option is chosen via Click or Enter. */
   onSelect?: (location: GeoLocation) => void;
+  /** Observability telemetry listener for dispatch, abort, and cache auditing. */
   onTelemetry?: (log: TelemetryLog) => void;
+  /** Keystroke debounce quiet window in milliseconds (defaults to 300ms). */
   debounceDelayMs?: number;
+  /** Minimum character threshold before querying upstream (defaults to 2). */
   minQueryLength?: number;
+  /** Artificial latency simulator for edge-case and race-condition testing. */
   simulateLatencyMs?: number;
+  /** Synthetic error simulator (503 Service Unavailable) for resilience testing. */
   simulateError?: boolean;
+  /** Custom CSS classes for the root container element. */
   className?: string;
+  /** Whether the combobox input should automatically focus on mount. */
   autoFocus?: boolean;
 }
 
+/**
+ * Production-ready, zero-dependency WAI-ARIA 1.2 Geographic Combobox.
+ *
+ * Implements strict accessibility patterns:
+ * - `role="combobox"` on the input element with dynamic `aria-expanded` and `aria-controls`.
+ * - Virtual focus management using `aria-activedescendant` linked to option IDs.
+ * - Full roving keyboard navigation (<kbd>↓/↑</kbd>, <kbd>Home/End</kbd>, <kbd>Enter</kbd>, <kbd>Esc</kbd>).
+ * - Screen-reader live region announcements (`aria-live="polite"`).
+ * - Click-outside dismissal and automatic scroll alignment for active items.
+ */
 export function LocationTypeahead({
   id: explicitId,
   label = 'Search Location or Property Hub',
